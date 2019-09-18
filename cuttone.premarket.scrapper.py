@@ -124,7 +124,7 @@ def main():
 		for singlesymbol in ticker_symbol:
 			print(singlesymbol)
 			try:
-				pm2_page = 'http://www.nasdaq.com/symbol/'+ singlesymbol +'/premarket'
+				pm2_page = 'http://old.nasdaq.com/symbol/'+ singlesymbol +'/premarket'
 				pm2_pagereq = requests.get(pm2_page)
 				pm2_soup = BeautifulSoup(pm2_pagereq.text, 'html.parser')   
 				pm2_hiprice = pm2_soup.find('span', id='quotes_content_left_lblHighprice')
